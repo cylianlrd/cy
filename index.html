@@ -86,6 +86,24 @@ box-shadow:  5px 5px 17px #84908d,
             redirectToYou(); // Appel de la fonction de redirection
         });
     </script>
+
+        <script>
+        const links = document.querySelectorAll('.links a');
+
+        links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Fade out effect
+                document.body.style.opacity = 0;
+                setTimeout(() => {
+                    window.location.href = link.getAttribute('href');
+                }, 500); // Adjust the time to match the transition duration
+
+                // You can also add a fade in effect on the new page using CSS
+            });
+        });
+    </script>
     
 </head>
 <body>
