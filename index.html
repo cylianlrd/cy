@@ -17,6 +17,15 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
+            opacity: 0; /* Initial opacity set to 0 */
+            animation: fadeIn 3s forwards; /* Apply the fade-in animation */
+        }
+        
+        /* Define the fade-in animation */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
         
         .header {
@@ -54,12 +63,17 @@
             transition: transform 0.2s, box-shadow 0.2s;
             text-decoration: none;
             display: inline-block;
-            background: linear-gradient(145deg, #a9b9b5, #c9dcd7);
-            box-shadow: 5px 5px 17px #84908d, -5px -5px 17px #f4ffff;
         }
         
         .button:hover {
             transform: scale(1.1);
+        }
+        
+        .youtube,
+        .instagram {
+            font-family: 'Limon Milk Bold', Arial, sans-serif;
+            background: linear-gradient(145deg, #a9b9b5, #c9dcd7);
+            box-shadow: 5px 5px 17px #84908d, -5px -5px 17px #f4ffff;
         }
     </style>
 
@@ -73,34 +87,16 @@
         window.addEventListener("scroll", function() {
             redirectToYouTube(); // Appel de la fonction de redirection
         });
-
-        // Écouteur d'événement pour les liens avec effet de fondu
-        document.addEventListener("DOMContentLoaded", function() {
-            const links = document.querySelectorAll('.button');
-
-            links.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-
-                    // Effet de fondu sortant
-                    document.body.style.opacity = 0;
-                    setTimeout(() => {
-                        window.location.href = link.getAttribute('href');
-                    }, 500); // Ajuster le temps pour correspondre à la durée de transition
-
-                    // Vous pouvez également ajouter un effet de fondu entrant sur la nouvelle page en utilisant CSS
-                });
-            });
-        });
     </script>
+    
 </head>
 <body>
     <div class="header">
         <div class="name">Cylian LORAND</div>
         <div class="username">@cylian.lorand</div>
         <div class="buttons">
-            <a class="button" href="https://cylianlrd.github.io/cy/me" target="_blank">YouTube</a>
-            <a class="button" href="https://www.instagram.com" target="_blank">Insta</a>
+            <a class="button youtube" href="https://cylianlrd.github.io/cy/zozo" target="_blank">YouTube</a>
+            <a class="button instagram" href="https://www.instagram.com" target="_blank">Insta</a>
         </div>
     </div>
 </body>
