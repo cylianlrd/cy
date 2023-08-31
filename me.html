@@ -12,21 +12,32 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #d4e3fe; /* Couleur finale */
+            background-color: #BCCEC9; /* Couleur initiale du fond */
             animation: fadeBackground 4s ease-in-out forwards; /* Animation de transition */
         }
 
         @keyframes fadeBackground {
             0% {
-                background-color: #BCCEC9; /* Couleur initiale */
+                background-color: #BCCEC9; /* Couleur initiale du fond */
             }
             100% {
-                background-color: #d4e3fe; /* Couleur finale */
+                background-color: #d4e3fe; /* Couleur finale du fond */
             }
         }
 
         .container {
             text-align: right;
+            opacity: 0; /* Commence avec une opacité de 0 pour l'effet de fondu */
+            animation: fadeIn 2s ease-in-out forwards; /* Animation de fondu */
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0; /* Opacité de départ */
+            }
+            100% {
+                opacity: 1; /* Opacité finale (complètement visible) */
+            }
         }
 
         .links {
@@ -40,6 +51,9 @@
             color: black;
             font-size: 18px;
             margin: 5px 0;
+            opacity: 0; /* Commence avec une opacité de 0 pour l'effet de fondu */
+            animation: fadeIn 2s ease-in-out forwards; /* Animation de fondu */
+            animation-delay: 0.5s; /* Délai pour que les liens apparaissent après le conteneur */
         }
     </style>
 </head>
