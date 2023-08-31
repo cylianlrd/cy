@@ -75,6 +75,19 @@
             background: linear-gradient(145deg, #a9b9b5, #c9dcd7);
             box-shadow: 5px 5px 17px #84908d, -5px -5px 17px #f4ffff;
         }
+        
+        /* Style for the arrow */
+        .arrow {
+            position: absolute;
+            bottom: 30px;
+            width: 0;
+            height: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 40px solid black;
+        }
     </style>
 
     <script>
@@ -99,5 +112,6 @@
             <a class="button instagram" href="https://www.instagram.com" target="_blank">Insta</a>
         </div>
     </div>
+    <div class="arrow"></div>
 </body>
 </html>
