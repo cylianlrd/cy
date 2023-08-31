@@ -12,7 +12,17 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
+            background-color: #d4e3fe; /* Couleur finale */
+            animation: fadeBackground 4s ease-in-out forwards; /* Animation de transition */
+        }
+
+        @keyframes fadeBackground {
+            0% {
+                background-color: #BCCEC9; /* Couleur initiale */
+            }
+            100% {
+                background-color: #d4e3fe; /* Couleur finale */
+            }
         }
 
         .container {
@@ -36,10 +46,11 @@
 <body>
     <div class="container">
         <div class="links">
+            <!-- Les liens vers YouTube -->
             <a href="https://www.youtube.com" target="_blank">Lien 1</a>
             <a href="https://www.youtube.com" target="_blank">Lien 2</a>
             <a href="https://www.youtube.com" target="_blank">Lien 3</a>
-            <!-- Ajoutez autant de liens que nécessaire -->
+            <!-- Vous pouvez ajouter autant de liens que nécessaire en dupliquant la ligne précédente et en modifiant l'URL et le texte du lien -->
         </div>
     </div>
 </body>
