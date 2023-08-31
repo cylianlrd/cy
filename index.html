@@ -54,65 +54,53 @@
             transition: transform 0.2s, box-shadow 0.2s;
             text-decoration: none;
             display: inline-block;
+            background: linear-gradient(145deg, #a9b9b5, #c9dcd7);
+            box-shadow: 5px 5px 17px #84908d, -5px -5px 17px #f4ffff;
         }
         
         .button:hover {
             transform: scale(1.1);
         }
-        
-        .youtube {
-            font-family: 'Limon Milk Bold', Arial, sans-serif;
-            background: linear-gradient(145deg, #a9b9b5, #c9dcd7);
-box-shadow:  5px 5px 17px #84908d,
-             -5px -5px 17px #f4ffff;
-        }
-        
-        .instagram {
-            font-family: 'Limon Milk Bold', Arial, sans-serif;
-            background: linear-gradient(145deg, #a9b9b5, #c9dcd7);
-box-shadow:  5px 5px 17px #84908d,
-             -5px -5px 17px #f4ffff;
-        }
     </style>
 
     <script>
         // Fonction pour rediriger vers YouTube
-        function redirectToYou() {
+        function redirectToYouTube() {
             window.location.href = "https://cylianlrd.github.io/cy/me"; // Lien vers YouTube
         }
 
         // Écouteur d'événement de défilement
         window.addEventListener("scroll", function() {
-            redirectToYou(); // Appel de la fonction de redirection
+            redirectToYouTube(); // Appel de la fonction de redirection
         });
-    </script>
 
-        <script>
-        const links = document.querySelectorAll('.links a');
+        // Écouteur d'événement pour les liens avec effet de fondu
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('.button');
 
-        links.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
+            links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
 
-                // Fade out effect
-                document.body.style.opacity = 0;
-                setTimeout(() => {
-                    window.location.href = link.getAttribute('href');
-                }, 500); // Adjust the time to match the transition duration
+                    // Effet de fondu sortant
+                    document.body.style.opacity = 0;
+                    setTimeout(() => {
+                        window.location.href = link.getAttribute('href');
+                    }, 500); // Ajuster le temps pour correspondre à la durée de transition
 
-                // You can also add a fade in effect on the new page using CSS
+                    // Vous pouvez également ajouter un effet de fondu entrant sur la nouvelle page en utilisant CSS
+                });
             });
         });
     </script>
-    
 </head>
 <body>
     <div class="header">
         <div class="name">Cylian LORAND</div>
         <div class="username">@cylian.lorand</div>
         <div class="buttons">
-            <a class="button youtube" href="https://cylianlrd.github.io/cy/zozo" target="_blank">YouTube</a>
-            <a class="button instagram" href="https://www.instagram.com" target="_blank">Insta</a>
+            <a class="button" href="https://cylianlrd.github.io/cy/me" target="_blank">YouTube</a>
+            <a class="button" href="https://www.instagram.com" target="_blank">Insta</a>
         </div>
     </div>
 </body>
