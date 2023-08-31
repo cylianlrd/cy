@@ -20,37 +20,37 @@
             opacity: 0;
             animation: fadeIn 3s forwards;
         }
-        
+
         @keyframes fadeIn {
             to {
                 opacity: 1;
             }
         }
-        
+
         .header {
             text-align: center;
         }
-        
+
         .name {
             font-size: 36px;
             font-weight: bold;
             margin-bottom: 10px;
             color: #000000;
         }
-        
+
         .username {
             font-size: 18px;
             color: gray;
             margin-bottom: 20px;
         }
-        
+
         .buttons {
             display: flex;
             gap: 20px;
             justify-content: center;
             margin-top: 20px;
         }
-        
+
         .button {
             padding: 10px 20px;
             border: none;
@@ -63,41 +63,38 @@
             text-decoration: none;
             display: inline-block;
         }
-        
+
         .button:hover {
             transform: scale(1.1);
         }
-        
+
         .youtube,
         .instagram {
             font-family: 'Limon Milk Bold', Arial, sans-serif;
             background: linear-gradient(145deg, #a9b9b5, #c9dcd7);
             box-shadow: 5px 5px 17px #84908d, -5px -5px 17px #f4ffff;
         }
-        
-        /* Style for the arrow */
+
         .arrow {
             position: absolute;
             bottom: 20px;
-            width: 20px;
-            height: 20px;
+            width: 0;
+            height: 0;
             left: 50%;
             transform: translateX(-50%);
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-top: 10px solid black;
-            cursor: pointer;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 20px solid black;
         }
     </style>
 
     <script>
-        function redirectToURL() {
+        function redirectToYouTube() {
             window.location.href = "https://cylianlrd.github.io/cy/me";
         }
-        
-        document.addEventListener("DOMContentLoaded", function() {
-            const arrow = document.querySelector(".arrow");
-            arrow.addEventListener("click", redirectToURL);
+
+        window.addEventListener("scroll", function() {
+            redirectToYouTube();
         });
     </script>
 </head>
