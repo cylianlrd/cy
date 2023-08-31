@@ -1,22 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Mon Site</title>
+    <title>Cylian LORAND - Site Personnel</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Limon&display=swap');
+
+        body {
+            font-family: 'Limon Milk Bold', Arial, sans-serif;
+            background-color: #BCCEC9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+        }
+        
+        .name {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #000000; /* Couleur du texte */
+        }
+        
+        .username {
+            font-size: 18px;
+            color: gray;
+            margin-bottom: 20px;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .button {
+            padding: 10px 20px;
+            border: none;
+            color: gray;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .button:hover {
+            transform: scale(1.1);
+        }
+        
+        .youtube {
+            font-family: 'Limon Milk Bold', Arial, sans-serif;
+            background: linear-gradient(145deg, #a9b9b5, #c9dcd7);
+box-shadow:  5px 5px 17px #84908d,
+             -5px -5px 17px #f4ffff;
+        }
+        
+        .instagram {
+            font-family: 'Limon Milk Bold', Arial, sans-serif;
+            background: linear-gradient(145deg, #a9b9b5, #c9dcd7);
+box-shadow:  5px 5px 17px #84908d,
+             -5px -5px 17px #f4ffff;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Bonjour</h1>
-        <p>Description qui dit au revoir.</p>
-    </header>
-    <main>
-        <div class="button-container">
-            <button id="button1" class="custom-button">Bouton 1</button>
-            <button id="button2" class="custom-button">Bouton 2</button>
+    <div class="header">
+        <div class="name">Cylian LORAND</div>
+        <div class="username">@cylian.lorand</div>
+        <div class="buttons">
+            <a class="button youtube" href="https://www.youtube.com" target="_blank">YouTube</a>
+            <a class="button instagram" href="https://www.instagram.com" target="_blank">Insta</a>
         </div>
-    </main>
-    <script src="script.js"></script>
+    </div>
 </body>
 </html>
