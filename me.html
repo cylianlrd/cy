@@ -13,16 +13,16 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #BCCEC9;
+            background-color: transparent; /* Arrière-plan initial transparent */
             animation: fadeBackground 4s ease-in-out forwards;
         }
 
         @keyframes fadeBackground {
             0% {
-                background-color: #BCCEC9;
+                background-color: transparent; /* Arrière-plan initial transparent */
             }
             100% {
-                background-color: #fefccf;
+                background-color: #BCCEC9; /* Nouvelle couleur d'arrière-plan */
             }
         }
 
@@ -61,10 +61,27 @@
 <body>
     <div class="container">
         <div class="links">
-            <a href="https://cylianlrd.github.io/cy">HOME</a>
+            <a href="#" onclick="animateAndRedirect();">HOME</a>
             <a href="http://www.youtube.com/channel/UCqs4dmBXUdpKCzg-4wduTZA?sub_confirmation=1" target="_blank">YOUTUBE</a>
             <a href="http://www.idk.com" target="_blank">IDK</a>
         </div>
     </div>
+
+    <script>
+        function animateAndRedirect() {
+            const elementsToAnimate = document.querySelectorAll('.container, .links');
+            
+            elementsToAnimate.forEach(element => {
+                element.style.opacity = '0';
+            });
+
+            const body = document.body;
+            body.style.backgroundColor = 'transparent';
+            
+            setTimeout(function() {
+                window.location.href = 'https://cylianlrd.github.io/cy';
+            }, 2000); // Redirige après 2 secondes (correspondant à la durée de l'animation de fondu)
+        }
+    </script>
 </body>
 </html>
