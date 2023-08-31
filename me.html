@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
+    <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><text x='0' y='12' font-size='16'>&#9875;</text></svg>">
     <style>
         body {
             margin: 0;
@@ -12,31 +13,31 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #BCCEC9; /* Couleur initiale du fond */
-            animation: fadeBackground 4s ease-in-out forwards; /* Animation de transition */
+            background-color: #BCCEC9;
+            animation: fadeBackground 4s ease-in-out forwards;
         }
 
         @keyframes fadeBackground {
             0% {
-                background-color: #BCCEC9; /* Couleur initiale du fond */
+                background-color: #BCCEC9;
             }
             100% {
-                background-color: #fefccf; /* Couleur finale du fond */
+                background-color: #fefccf;
             }
         }
 
         .container {
             text-align: center;
-            opacity: 0; /* Commence avec une opacité de 0 pour l'effet de fondu */
-            animation: fadeIn 2s ease-in-out forwards; /* Animation de fondu */
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
         }
 
         @keyframes fadeIn {
             0% {
-                opacity: 0; /* Opacité de départ */
+                opacity: 0;
             }
             100% {
-                opacity: 1; /* Opacité finale (complètement visible) */
+                opacity: 1;
             }
         }
 
@@ -51,16 +52,15 @@
             color: black;
             font-size: 18px;
             margin: 5px 0;
-            opacity: 0; /* Commence avec une opacité de 0 pour l'effet de fondu */
-            animation: fadeIn 2s ease-in-out forwards; /* Animation de fondu */
-            animation-delay: 0.5s; /* Délai pour que les liens apparaissent après le conteneur */
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+            animation-delay: 0.5s;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="links">
-            <!-- Les liens personnalisés -->
             <a href="https://cylianlrd.github.io/cy">HOME</a>
             <a href="http://www.youtube.com/channel/UCqs4dmBXUdpKCzg-4wduTZA?sub_confirmation=1" target="_blank">YOUTUBE</a>
             <a href="http://www.idk.com" target="_blank">IDK</a>
