@@ -17,11 +17,10 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            opacity: 0; /* Initial opacity set to 0 */
-            animation: fadeIn 3s forwards; /* Apply the fade-in animation */
+            opacity: 0;
+            animation: fadeIn 3s forwards;
         }
         
-        /* Define the fade-in animation */
         @keyframes fadeIn {
             to {
                 opacity: 1;
@@ -36,7 +35,7 @@
             font-size: 36px;
             font-weight: bold;
             margin-bottom: 10px;
-            color: #000000; /* Couleur du texte */
+            color: #000000;
         }
         
         .username {
@@ -80,28 +79,27 @@
         .arrow {
             position: absolute;
             bottom: 20px;
-            width: 0;
-            height: 0;
+            width: 20px;
+            height: 20px;
             left: 50%;
             transform: translateX(-50%);
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 20px solid black;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid black;
+            cursor: pointer;
         }
     </style>
 
     <script>
-        // Fonction pour rediriger vers YouTube
-        function redirectToYouTube() {
-            window.location.href = "https://cylianlrd.github.io/cy/me"; // Lien vers YouTube
+        function redirectToURL() {
+            window.location.href = "https://cylianlrd.github.io/cy/me";
         }
-
-        // Écouteur d'événement de défilement
-        window.addEventListener("scroll", function() {
-            redirectToYouTube(); // Appel de la fonction de redirection
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            const arrow = document.querySelector(".arrow");
+            arrow.addEventListener("click", redirectToURL);
         });
     </script>
-    
 </head>
 <body>
     <div class="header">
