@@ -3,22 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cylian LORAND</title>
+    <title>Page de Cylian et LORAND</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Limon&display=swap');
-
         body {
-            font-family: 'Limon Milk Bold', Arial, sans-serif;
-            background-color: #BCCEC9;
+            background-color: #36413E;
+            font-family: 'Lemon Milk Bold', sans-serif;
+            text-align: center;
             margin: 0;
             padding: 0;
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            min-height: 100vh;
             opacity: 0;
-            animation: fadeIn 3s forwards;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        h1, h2 {
+            font-family: 'Lemon Milk Bold', sans-serif;
+            font-size: 48px;
+            margin: 1px;
+            color: #D7D6D6; /* Couleur de texte pour h1 et h2 */
+        }
+
+        p {
+            font-family: 'Lemon Milk Bold', sans-serif;
+            font-size: 24px;
+            margin: 1px;
+            color: #ffffff; /* Couleur de texte pour p */
+        }
+
+        #scroll-text {
+            font-size: 18px;
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            color: #cce3de35; /* Couleur de texte pour #scroll-text */
         }
 
         @keyframes fadeIn {
@@ -26,87 +47,20 @@
                 opacity: 1;
             }
         }
-
-        .header {
-            text-align: center;
-        }
-
-        .name {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #000000;
-        }
-
-        .username {
-            font-size: 18px;
-            color: gray;
-            margin-bottom: 20px;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .button {
-            padding: 10px 20px;
-            border: none;
-            color: gray;
-            font-weight: bold;
-            text-transform: uppercase;
-            cursor: pointer;
-            border-radius: 20px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .button:hover {
-            transform: scale(1.1);
-        }
-
-        .youtube,
-        .instagram {
-            font-family: 'Limon Milk Bold', Arial, sans-serif;
-            background: linear-gradient(145deg, #a9b9b5, #c9dcd7);
-            box-shadow: 5px 5px 17px #84908d, -5px -5px 17px #f4ffff;
-        }
-
-        .arrow {
-            position: absolute;
-            bottom: 20px;
-            width: 0;
-            height: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 20px solid black;
-        }
     </style>
-
-    <script>
-        function redirectToYouTube() {
-            window.location.href = "https://cylianlrd.github.io/cy/me";
-        }
-
-        window.addEventListener("scroll", function() {
-            redirectToYouTube();
-        });
-    </script>
 </head>
 <body>
-    <div class="header">
-        <div class="name">Cylian LORAND</div>
-        <div class="username">@cylian.lorand</div>
-        <div class="buttons">
-            <a class="button youtube" href="https://cylianlrd.github.io/cy/zozo" target="_blank">YouTube</a>
-            <a class="button instagram" href="https://www.instagram.com" target="_blank">Insta</a>
-        </div>
+    <h1>Cylian</h1>
+    <h2>LORAND</h2>
+    <p>@cylian.lorand</p>
+    <div id="scroll-text">
+        Scroll for more
     </div>
-    <div class="arrow"></div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            window.location.href = 'https://www.youtube.com';
+        });
+    </script>
 </body>
 </html>
